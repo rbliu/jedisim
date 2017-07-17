@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2010)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: deflection.aux
+The style file: plain.bst
+Database file #1: bib.bib.bib
+Warning--empty journal in Narayan:1996ba
+You've used 3 entries,
+            2118 wiz_defined-function locations,
+            514 strings with 4381 characters,
+and the built_in function-call counts, 850 in all, are:
+= -- 79
+> -- 44
+< -- 0
++ -- 17
+- -- 14
+* -- 55
+:= -- 158
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 31
+empty$ -- 61
+format.name$ -- 14
+if$ -- 168
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 3
+newline$ -- 18
+num.names$ -- 6
+pop$ -- 16
+preamble$ -- 1
+purify$ -- 13
+quote$ -- 0
+skip$ -- 23
+stack$ -- 0
+substring$ -- 36
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 1
+while$ -- 7
+width$ -- 4
+write$ -- 32
+(There was 1 warning)
