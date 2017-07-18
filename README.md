@@ -6,7 +6,7 @@
 
 *2016-02-22*: jedisim5.1 has included 201 images from CANDELS GOODS-S sect23 F606W.
 
-#########################################
+
 ## Introduction and implementation
 
 Please refer to the documentations:
@@ -20,12 +20,12 @@ Modify your settings in jedisim5/physics_settings/.
 
 ### Lens parameter
 
-Modify the lens parameter file "lens*.txt". 
+* Modify the lens parameter file "lens*.txt". 
 
-Modify the file name of "lens*.txt" in "config" or "config_grid" correspondingly. 
+* Modify the file name of "lens*.txt" in "config" or "config_grid" correspondingly. 
 
-Format of lens parameter file "lens*.txt": x y type p1 p2
-    where x - x center of lens (in pixels)
+* Format of lens parameter file "lens*.txt": x y type p1 p2
+    ** where x - x center of lens (in pixels)
         y - y center of lens (in pixels)
         type - type of mass profile
 	    1. Singular isothermal sphere
