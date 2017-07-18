@@ -40,13 +40,20 @@ Modify your settings in jedisim/physics_settings/.
             3 = NFW constant distortion profile for grid simulations
 
         * p1 - first profile parameter
-            *1. sigma_v [km/s]
-            *2. M200 parameter [10^14 solar masses]
-            *3. Distance to center in pixels. M200 fixed at 20 default, which can be modified in case 3
+
+            1 = sigma_v [km/s]
+
+            2 = M200 parameter [10^14 solar masses]
+
+            3 = Distance to center in pixels. M200 fixed at 20 default, which can be modified in case 3
+
         * p2 - second profile parameter
-            *1. not applicable, can take any numerical
-            *2. concentration parameter [dimentionless]
-            *3. concentration parameter [dimentionless]
+
+            1 = not applicable, can take any numerical
+
+            2 = concentration parameter [dimentionless]
+
+            3 = concentration parameter [dimentionless]
 
     * We recommend to use type=2 (NFW profile) for cluster simulations, and type=1 (SIS profile) for grid simulations. 
 
