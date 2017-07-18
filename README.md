@@ -33,11 +33,11 @@ Modify your settings in jedisim/physics_settings/.
         * y - y center of lens (in pixels)
         * type - type of mass profile
             
-            1. Singular isothermal sphere
+            * 1. Singular isothermal sphere
 
-            2. Navarro-Frenk-White profile
+            * 2. Navarro-Frenk-White profile
             
-            3. NFW constant distortion profile for grid simulations
+            * 3. NFW constant distortion profile for grid simulations
 
         * p1 - first profile parameter
             *1. sigma_v [km/s]
