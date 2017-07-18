@@ -7,14 +7,14 @@
 *2016-02-22*: jedisim5.1 has included 201 images from CANDELS GOODS-S sect23 F606W.
 
 
-## Introduction and implementation
+## 1. Introduction and implementation
 
 * Please refer to the documentations:
     * jedisim5/documentation/jedisim4_jedisim.pdf
     * jedisim5/documentation/jedisim4_lensing.pdf
 
 
-## Configuration
+## 2. Configuration
 
 Modify your settings in jedisim/physics_settings/.
 
@@ -56,14 +56,14 @@ Modify your settings in jedisim/physics_settings/.
     * Make sure the grid_radius is smaller than half of the image size. 
 
 
-## Usage
+## 3. Usage
 
 Under "jedisim" directory:
 ```
 python jedimaster.py physics_settings/config
 ```
 
-## Output
+## 4. Output
 
 * Specify the directory of output images (eg. "trial_1/") in the output settings section of "config" file.
 
@@ -72,7 +72,7 @@ python jedimaster.py physics_settings/config
 * There are corresponding simulation output in which the galaxies are 90 degree rotated in output directory (eg. "90_trial_1/").
 
 
-## Others
+## 5. Others
 
 * The original images and radius/redshift data are in "jedisim/simdatabase/". 
 
