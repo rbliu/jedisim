@@ -18,6 +18,9 @@ _build.*
 *.os
 *.pyc
 *.so
+*~
+#*
+*#
 .DS_Store
 config.log
 tests/.tests
