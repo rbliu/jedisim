@@ -1,22 +1,24 @@
-Updates:
+# jedisim
 
-2016-07-17: jedisim5.2 has added 201 images from CANDELS GOODS-S sect23 F814W corresponding to the F606W images. In the distortion code, type=3 generates the distortion table with a single shear, thus we suggest to use type=2 in grid simulations. 
+**Updates:**
 
-2016-02-22: jedisim5.1 has included 201 images from CANDELS GOODS-S sect23 F606W.
+*2016-07-17*: jedisim5.2 has added 201 images from CANDELS GOODS-S sect23 F814W corresponding to the F606W images. In the distortion code, type=3 generates the distortion table with a single shear, thus we suggest to use type=2 in grid simulations. 
+
+*2016-02-22*: jedisim5.1 has included 201 images from CANDELS GOODS-S sect23 F606W.
 
 #########################################
-1. Introduction and implementation
+## Introduction and implementation
 
 Please refer to the documentations:
 jedisim5/documentation/jedisim4_jedisim.pdf
 jedisim5/documentation/jedisim4_lensing.pdf
 
 
-2. Configuration
+## Configuration
 
 Modify your settings in jedisim5/physics_settings/.
 
-2.1 Lens parameter
+### Lens parameter
 
 Modify the lens parameter file "lens*.txt". 
 
@@ -40,7 +42,7 @@ Format of lens parameter file "lens*.txt": x y type p1 p2
 
 We recommend to use type=2 (NFW profile) for cluster simulations, and type=1 (SIS profile) for grid simulations. 
 
-2.2 Configuration file
+### Configuration file
 
 Modify the configuration file "config" for cluster simulation or "config_grid" for grid simulation.
 
@@ -54,14 +56,14 @@ Set sigma_v (in km/s) in the lens parameter file.
 Make sure the grid_radius is smaller than half of the image size. 
 
 
-3. Usage
+## Usage
 
 In "jedisim5/" folder:
 
 python jedimaster.py physics_settings/config
 
 
-4. Output
+## Output
 
 Specify the directory of output images (eg. "trial_1/") in the output settings section of "config" file.
 
@@ -70,7 +72,7 @@ Specify the output prefix (eg. "trial1_") in the output settings section of "con
 There are corresponding simulation output in which the galaxies are 90 degree rotated in output directory (eg. "90_trial_1/").
 
 
-5. Others
+## Others
 
 The original images and radius/redshift data are in "jedisim5/simdatabase/". 
 
