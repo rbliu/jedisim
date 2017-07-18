@@ -2,7 +2,7 @@
 
 jedisim is a tool to generate galaxy cluster simulations from real galaxy observational images. 
 
-> **Copyright**: The original source code is developed by Daniel Parker and Ian Dell'Antonio, maintained and update by Robert Binyang Liu (Brown University). <br>
+> **Copyright**: The original source code was developed by Daniel Parker and Ian Dell'Antonio, maintained and updated by Robert Binyang Liu (Brown University). <br>
 > Due to the limitation of single file size on github, we cannot upload all the galaxy postage stamps here. We will upload them somewhere else.
 
 **Updates:**
@@ -15,8 +15,8 @@ jedisim is a tool to generate galaxy cluster simulations from real galaxy observ
 ## 1. Introduction and implementation
 
 * Please refer to the documentations:
-    * jedisim5/documentation/jedisim4_jedisim.pdf
-    * jedisim5/documentation/jedisim4_lensing.pdf
+    * jedisim/documentation/jedisim4_jedisim.pdf
+    * jedisim/documentation/jedisim4_lensing.pdf
 
 
 ## 2. Configuration
