@@ -1,5 +1,7 @@
 # jedisim
 
+>> Copyright
+
 **Updates:**
 
 *2016-07-17*: jedisim5.2 has added 201 images from CANDELS GOODS-S sect23 F814W corresponding to the F606W images. In the distortion code, type=3 generates the distortion table with a single shear, thus we suggest to use type=2 in grid simulations. 
