@@ -9,7 +9,7 @@ The goal of *jedisim* is to generate image simulations for galaxy clusters as a 
 
 **Updates:**
 
-*2016-07-17*: *jedisim5.2* has added 201 images from *CANDELS GOODS-S sect23* F814W corresponding to the F606W images. In the distortion code, type=3 generates the distortion table with a single shear, thus we suggest to use type=2 in grid simulations.
+*2016-07-17*: *jedisim5.2* has added 201 images from *CANDELS GOODS-S sect23 F814W* corresponding to the *F606W* images. In the distortion code, type=3 generates the distortion table with a single shear, thus we suggest to use type=2 in grid simulations.
 
 *2016-02-22*: *jedisim5.1* has included 201 images from *CANDELS GOODS-S sect23 F606W*.
 
@@ -23,7 +23,7 @@ The goal of *jedisim* is to generate image simulations for galaxy clusters as a 
 
 ## 2. Configuration
 
-Modify your settings in jedisim/physics_settings/.
+Modify your settings in *jedisim/physics_settings/*.
 
 ### Lens parameter
 
@@ -69,9 +69,9 @@ Modify your settings in jedisim/physics_settings/.
 * The simulation output is rescaled from HST pixel scale to the final pixel scale set in the configuration file.
 
 * For grid simulations:
-    * Set the grid_radius (in pixels) and grid_angle (in radian) in the configuration file.
-    * Set sigma_v (in km/s) in the lens parameter file.
-    * Make sure the grid_radius is smaller than half of the image size.
+    * Set the *grid_radius (in pixels)* and *grid_angle (in radian)* in the configuration file.
+    * Set *sigma_v (in km/s)* in the lens parameter file.
+    * Make sure the *grid_radius* is smaller than half of the image size.
 
 
 ## 3. Usage
@@ -98,4 +98,4 @@ python jedimaster.py physics_settings/config
 
 * Other parameters can be modified in "jedisim/sources/jedidistort.c" (eg. OMEGA_M, G, H0).
 
-* If any modifications are made in "jedisim/source/" folder, delete the UNIX executable files in "jedisim/" (jedicatalog, jediconvolve, jedidistort, jedigrid_a, jedigrid_b, jedinoise, jedipaste, jedirescale, jeditransform) and regenerate them.
+* If any modifications are made in "jedisim/source/" folder, remove the UNIX executable files in "jedisim/" (jedicatalog, jediconvolve, jedidistort, jedigrid_a, jedigrid_b, jedinoise, jedipaste, jedirescale, jeditransform) and regenerate them.
