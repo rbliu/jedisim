@@ -1,13 +1,14 @@
 # jedisim
 
-jedisim is a tool to generate galaxy cluster simulations from real galaxy observational images. 
+jedisim is a tool to generate galaxy cluster simulations from real galaxy observational images.
 
-> **Copyright**: The original source code was developed by Daniel Parker and Ian Dell'Antonio, maintained and updated by Robert Binyang Liu (Brown University). <br>
+> **Copyright**: The original source code was developed by Daniel Parker and Ian Dell'Antonio, maintained and updated by Robert Binyang Liu and Shenming Fu(Brown University). <br>
+> The goal of jedisim is to generate image simulations for galaxy clusters as a part of [ARCLETS (Analysis of Realistic Cluster Lensing through Extensive Training Simulations)](http://www.het.brown.edu/people/ian/ClustersChallenge/). It is also used to test and calibrate the shape measurements and deblanding in [LSST DM stack](https://pipelines.lsst.io/index.html), as well as mass measurements in [Clusters pipeline](https://github.com/nicolaschotard/Clusters).
 > Due to the limitation of single file size on github, we cannot upload all the galaxy postage stamps here. We will upload them somewhere else.
 
 **Updates:**
 
-*2016-07-17*: jedisim5.2 has added 201 images from CANDELS GOODS-S sect23 F814W corresponding to the F606W images. In the distortion code, type=3 generates the distortion table with a single shear, thus we suggest to use type=2 in grid simulations. 
+*2016-07-17*: jedisim5.2 has added 201 images from CANDELS GOODS-S sect23 F814W corresponding to the F606W images. In the distortion code, type=3 generates the distortion table with a single shear, thus we suggest to use type=2 in grid simulations.
 
 *2016-02-22*: jedisim5.1 has included 201 images from CANDELS GOODS-S sect23 F606W.
 
@@ -25,19 +26,19 @@ Modify your settings in jedisim/physics_settings/.
 
 ### Lens parameter
 
-* Modify the lens parameter file "lens*.txt". 
+* Modify the lens parameter file "lens*.txt".
 
-* Modify the file name of "lens*.txt" in "config" or "config_grid" correspondingly. 
+* Modify the file name of "lens*.txt" in "config" or "config_grid" correspondingly.
 
 * Format of lens parameter file "lens*.txt": x y type p1 p2
     * where x - x center of lens (in pixels)
         * y - y center of lens (in pixels)
         * type - type of mass profile
-            
+
             1 = Singular isothermal sphere
 
             2 = Navarro-Frenk-White profile
-            
+
             3 = NFW constant distortion profile for grid simulations
 
         * p1 - first profile parameter
@@ -56,7 +57,7 @@ Modify your settings in jedisim/physics_settings/.
 
             3 = concentration parameter [dimentionless]
 
-    * We recommend to use type=2 (NFW profile) for cluster simulations, and type=1 (SIS profile) for grid simulations. 
+    * We recommend to use type=2 (NFW profile) for cluster simulations, and type=1 (SIS profile) for grid simulations.
 
 ### Configuration file
 
@@ -64,12 +65,12 @@ Modify your settings in jedisim/physics_settings/.
 
 * Include the PSF file into the "physics_settings/" folder, and specify the PSF file name in the configuration file.
 
-* The simulation output is rescaled from HST pixel scale to the final pixel scale set in the configuration file. 
+* The simulation output is rescaled from HST pixel scale to the final pixel scale set in the configuration file.
 
-* For grid simulations: 
+* For grid simulations:
     * Set the grid_radius (in pixels) and grid_angle (in radian) in the configuration file.
-    * Set sigma_v (in km/s) in the lens parameter file. 
-    * Make sure the grid_radius is smaller than half of the image size. 
+    * Set sigma_v (in km/s) in the lens parameter file.
+    * Make sure the grid_radius is smaller than half of the image size.
 
 
 ## 3. Usage
@@ -90,10 +91,10 @@ python jedimaster.py physics_settings/config
 
 ## 5. Others
 
-* The original images and radius/redshift data are in "jedisim/simdatabase/". 
+* The original images and radius/redshift data are in "jedisim/simdatabase/".
 
 * The source codes are in "jedisim/sources/".
 
-* Other parameters can be modified in "jedisim/sources/jedidistort.c" (eg. OMEGA_M, G, H0). 
+* Other parameters can be modified in "jedisim/sources/jedidistort.c" (eg. OMEGA_M, G, H0).
 
-* If any modifications are made in "jedisim/source/" folder, delete the UNIX executable files in "jedisim/" (jedicatalog, jediconvolve, jedidistort, jedigrid_a, jedigrid_b, jedinoise, jedipaste, jedirescale, jeditransform) and regenerate them. 
+* If any modifications are made in "jedisim/source/" folder, delete the UNIX executable files in "jedisim/" (jedicatalog, jediconvolve, jedidistort, jedigrid_a, jedigrid_b, jedinoise, jedipaste, jedirescale, jeditransform) and regenerate them.
