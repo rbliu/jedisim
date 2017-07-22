@@ -1,17 +1,17 @@
 # jedisim
 
-jedisim is a tool to generate galaxy cluster simulations from real galaxy observational images.
+*jedisim* is a tool to generate galaxy cluster simulations from real galaxy observational images.
 
-The goal of jedisim is to generate image simulations for galaxy clusters as a part of [ARCLETS (Analysis of Realistic Cluster Lensing through Extensive Training Simulations)](http://www.het.brown.edu/people/ian/ClustersChallenge/). It is also used to test and calibrate the shape measurements and deblanding in [LSST DM stack](https://pipelines.lsst.io/index.html), as well as mass measurements in [Clusters pipeline](https://github.com/nicolaschotard/Clusters).
+The goal of *jedisim* is to generate image simulations for galaxy clusters as a part of [ARCLETS (Analysis of Realistic Cluster Lensing through Extensive Training Simulations)](http://www.het.brown.edu/people/ian/ClustersChallenge/). It is also used to test and calibrate the shape measurements and deblanding in [LSST DM stack](https://pipelines.lsst.io/index.html), as well as mass measurements in [CFHT Clusters pipeline](https://github.com/nicolaschotard/Clusters).
 
 > **Copyright**: The original source code was developed by Daniel Parker and Ian Dell'Antonio, maintained and updated by Robert Binyang Liu and Shenming Fu(Brown University). <br>
 > **Claim**: Due to the limitation of single file size on github, we cannot upload all the galaxy postage stamps here. We will upload them somewhere else.
 
 **Updates:**
 
-*2016-07-17*: jedisim5.2 has added 201 images from CANDELS GOODS-S sect23 F814W corresponding to the F606W images. In the distortion code, type=3 generates the distortion table with a single shear, thus we suggest to use type=2 in grid simulations.
+*2016-07-17*: *jedisim5.2* has added 201 images from *CANDELS GOODS-S sect23* F814W corresponding to the F606W images. In the distortion code, type=3 generates the distortion table with a single shear, thus we suggest to use type=2 in grid simulations.
 
-*2016-02-22*: jedisim5.1 has included 201 images from CANDELS GOODS-S sect23 F606W.
+*2016-02-22*: *jedisim5.1* has included 201 images from *CANDELS GOODS-S sect23 F606W*.
 
 
 ## 1. Introduction and implementation
