@@ -1,5 +1,5 @@
 ![text][logo]
-[logo]: https://www.brown.edu/academics/physics/sites/brown.edu.academics.physics/files/ursa_minor_robust_banner_image.jpg
+[logo]:https://www.brown.edu/academics/physics/sites/brown.edu.academics.physics/files/ursa_minor_robust_banner_image.jpg
 
 # jedisim
 
