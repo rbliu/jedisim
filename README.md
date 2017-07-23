@@ -20,7 +20,9 @@ The goal of *jedisim* is to generate image simulations for galaxy clusters as a 
 ## 1. Introduction and implementation
 
 * Please refer to the documentations:
+
     * jedisim/documentation/jedisim4_jedisim.pdf
+    
     * jedisim/documentation/jedisim4_lensing.pdf
 
 
