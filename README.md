@@ -1,7 +1,5 @@
-![logo][logo]
-[logo]:[logo]:https://www.brown.edu/academics/physics/sites/brown.edu.academics.physics/files/ursa_minor_robust_banner_image.jpg
 # jedisim
----
+
 *jedisim* is a tool to generate galaxy cluster simulations from real galaxy observational images.
 
 The goal of *jedisim* is to generate image simulations for galaxy clusters as a part of [ARCLETS (Analysis of Realistic Cluster Lensing through Extensive Training Simulations)](http://www.het.brown.edu/people/ian/ClustersChallenge/). It is also used to test and calibrate the shape measurements and deblanding in [LSST DM stack](https://pipelines.lsst.io/index.html), as well as mass measurements in [CFHT Clusters pipeline](https://github.com/nicolaschotard/Clusters).
