@@ -28,6 +28,7 @@ Dups/*.cfgc
 version.py
 *.dSYM
 *.fits
+!physics_settings/*.fits
 simdatabase/CANDELS/*
 simdatabase/CANDELS814/*
 simdatabase/CANDELS125/*
@@ -43,4 +44,4 @@ jedipaste
 jedirescale
 jeditransform
 jedimaster\ copy.py
-jedimaster_grid\ copy.py  
+jedimaster_grid\ copy.py
