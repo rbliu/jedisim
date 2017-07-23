@@ -1,4 +1,4 @@
-# ![jedisim][logo]
+# jedisim![blah][logo]
 ----------
 [logo]:https://www.brown.edu/academics/physics/sites/brown.edu.academics.physics/files/ursa_minor_robust_banner_image.jpg
 
