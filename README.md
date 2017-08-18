@@ -6,10 +6,12 @@
 
 The goal of *jedisim* is to generate image simulations for galaxy clusters as a part of [ARCLETS (Analysis of Realistic Cluster Lensing through Extensive Training Simulations)](http://www.het.brown.edu/people/ian/ClustersChallenge/). It is also used to test and calibrate the shape measurements and deblanding in [LSST DM stack](https://pipelines.lsst.io/index.html), as well as mass measurements in [CFHT Clusters pipeline](https://github.com/nicolaschotard/Clusters).
 
-> **Copyright**: The original source code was developed by Daniel Parker and Ian Dell'Antonio, maintained and updated by Robert Binyang Liu and Shenming Fu(Brown University). <br>
+> **Copyright**: The original source code was developed by Daniel Parker and Ian Dell'Antonio, maintained and updated by Robert Binyang Liu and Shenming Fu. <br>
 > **Claim**: Due to the limitation of single file size on github, we cannot upload all the galaxy postage stamps here. We will upload them somewhere else.
 
 **Updates:**
+
+*2017-08-18*: *jedisim5.3* has scripts to add fake WCS information to the simulation images (at LSST pixel scale).
 
 *2016-07-17*: *jedisim5.2* has added 201 images from *CANDELS GOODS-S sect23 F814W* corresponding to the *F606W* images. In the distortion code, type=3 generates the distortion table with a single shear, thus we suggest to use type=2 in grid simulations.
 
@@ -22,7 +24,7 @@ The goal of *jedisim* is to generate image simulations for galaxy clusters as a 
 * Please refer to the documentations:
 
     * jedisim/documentation/jedisim4_jedisim.pdf
-    
+
     * jedisim/documentation/jedisim4_lensing.pdf
 
 
@@ -94,8 +96,14 @@ python jedimaster.py physics_settings/config
 
 * There are corresponding simulation output in which the galaxies are 90 degree rotated in output directory (eg. "90_trial_1/").
 
+## 5. WCS
 
-## 5. Others
+* By default, cluster and grid simulations have no WCS information in fits headers. To add ra-dec coordinates, run
+```
+python jediWCS.py /path/to/LSST/simulation
+```
+
+## 6. Others
 
 * The original images and radius/redshift data are in "jedisim/simdatabase/".
 
