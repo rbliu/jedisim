@@ -27,13 +27,17 @@ tests/.tests
 Dups/*.cfgc
 version.py
 *.dSYM
+
+# Ignore all galaxy postage stamps
 *.fits
 !physics_settings/*.fits
+!useful_scripts/*.fits
 simdatabase/CANDELS/*
 simdatabase/CANDELS814/*
 simdatabase/CANDELS125/*
 simdatabase/doneall2/*
 simdatabase/ivydoneall3/*
+
 jedicatalog
 jediconvolve
 jedidistort

@@ -4,7 +4,7 @@ import os, sys, subprocess, math, re, shutil,copy
 
 #parse command line inputs
 if(len(sys.argv) != 5):
-    print("Usage: python jediconvolver.py HST_image_to_convolve convolvedlist_file output_folder psf_file")
+    print("Usage: python jediconvolver.py original_folder/ HST_image_name output_folder/ psf_file")
     sys.exit(1);
 
 """
@@ -27,19 +27,19 @@ config['psf_file'] = sys.argv[4]
 ##user-set values
 config['nx'] = "12288"
 config['ny'] = "12288"
-config['pix_scale'] = "0.03"
-config['final_pix_scale'] = "0.27"
-config['x_trim'] = "0"
-config['y_trim'] = "0"
+config['pix_scale'] = "0.06"
+config['final_pix_scale'] = "0.2"
+config['x_trim'] = "240"
+config['y_trim'] = "240"
 config['exp_time'] = "6000"
-config['noise_mean'] = "21.63"
+config['noise_mean'] = "1.0"
 #######end user set values
 
 
 config['prefix'] = sys.argv[2].split("HST")[0]
 config['HST_convolved_image']="HST_convolved.fits"
-config['LSST_convolved_image']="DECam_convolved.fits"
-config['LSST_convolved_noise_image']="DECam_convolved_noise.fits"
+config['LSST_convolved_image']="LSST_convolved.fits"
+config['LSST_convolved_noise_image']="LSST_convolved_noise.fits"
 
 
 config['convolved_path'] = config['original_folder'] + "convolved/"
