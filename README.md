@@ -1,4 +1,4 @@
-![logo](https://www.brown.edu/academics/physics/sites/brown.edu.academics.physics/files/ursa_minor_robust_banner_image.jpg "logo of Brown Physics")
+![logo](https://github.com/rbliu/Memo-astro/blob/master/images/Brown_physics.jpg "logo of Brown Physics")
 
 # jedisim
 
