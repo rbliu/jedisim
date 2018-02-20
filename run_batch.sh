@@ -26,6 +26,14 @@ do
 		rm -r $f
 	done
 
+	do
+		python jediWCS.py "trial_$i/*_LSST_convolved_noise.fits"
+	done
+
+	do
+		python jediWCS.py "90_trial_$i/*_LSST_convolved_noise.fits"
+	done
+
 	cp -R "trial_$i/" "/Volumes/rliu/production_1_clusters/trial_$i"
 	rm -R "trial_$i/"
 	cp -R "90_trial_$i/" "/Volumes/rliu/production_1_clusters/90_trial_$i"

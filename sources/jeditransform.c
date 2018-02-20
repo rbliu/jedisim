@@ -10,6 +10,7 @@
 #define PI  3.14159         //because C doesn't have it built-in for some silly reason
 #define EPSILON 0.0000001   //a very small number
 #define MAG0 30.0           //magnitude zero point
+//#define MAG0 26.66
 
 char *help[] = {
     "Takes in a catalog of images, and produces a FITS image for each entry, transformed to the correct specifications.",
@@ -53,7 +54,7 @@ typedef struct{
 
 int main(int argc, char *argv[]){
     //declare variables
-    int     ngalaxies;          //the number of galaxies  
+    int     ngalaxies;          //the number of galaxies
     char    gallist_path[1024]; //file path for the list of galaxies
     char    dislist_path[1024]; //file path for the distortions list
     FILE    *gallist_file;      //galaxy list file
@@ -231,9 +232,9 @@ int main(int argc, char *argv[]){
         //create and write output image
         fits_create_file(&outfptr, galaxies[g].stamp1, &status);
         fits_create_img(outfptr, FLOAT_IMG, naxis, tgalnaxes, &status);
-        fits_update_key(outfptr, TLONG, "XEMBED", &xembed, "x pixel in targe image to embed lower left pixel.", &status);	
+        fits_update_key(outfptr, TLONG, "XEMBED", &xembed, "x pixel in targe image to embed lower left pixel.", &status);
         fits_update_key(outfptr, TLONG, "YEMBED", &yembed, "y pixel in targe image to embed lower left pixel.", &status);
-		fits_update_key(outfptr,TSTRING,"IMAGE NAME", galaxies[g].image,"",&status);	
+		fits_update_key(outfptr,TSTRING,"IMAGE NAME", galaxies[g].image,"",&status);
         fits_write_pix(outfptr, TFLOAT, fpixel, tgalnaxes[0]*tgalnaxes[1], pgal, &status);
 
         //close the FITS file
@@ -264,5 +265,5 @@ float bilinear_interp(float x, float y, int xmax, int ymax, float *img){
         float xf = x -xi, yf = y-yi;
         return a*(1-xf)*(1-yf) + b*xf*(1-yf) + c*(1-xf)*yf + d*xf*yf;
     } else
-        return 0;        
+        return 0;
 }
