@@ -4,6 +4,7 @@
 // also add <time.h> for random number seed
 
 // Mon Feb 19 20:10:11 EST 2018: faster method
+// Wed Feb 28 14:03:08 EST 2018: first add noise, than multiply it by exposure time
 
 #include <stdio.h>
 #include <string.h>
@@ -118,7 +119,7 @@ int main(int argc, char *argv[]){
         for(col = 0; col < inaxes[1]; col++){
             long int    index = row*inaxes[1]+col;      //index of this pixel in the image array
             float   u, v;
-            float   r2 = 2;
+            float   r2 = 2;                         //some value larger than 1
             while(r2>1){
                 u = 2*((float) rand())/RAND_MAX-1;  //random float between 0 and 1
                 v = 2*((float) rand())/RAND_MAX-1;
@@ -135,8 +136,7 @@ int main(int argc, char *argv[]){
             //printf("random j=%ld\n",j);
 */
 
-            image[index] = exp_time*image[index] + sqrt(-2*log(r2)/r2)*u*noise_std*exp_time;
-            //Need to multiply noise with exp_time?
+            image[index] = exp_time*(image[index] + sqrt(-2*log(r2)/r2)*u*noise_std);
         }
     }
 
