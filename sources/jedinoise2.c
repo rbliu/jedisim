@@ -34,7 +34,7 @@ int main(int argc, char *argv[]){
     long        fpixel[2] = {1,1};          //cfitsio first pixel to read in/out
     float       *image;                     //array for the input and output images
 /*
-    float       *CDF;                       //continuous distribution function 
+    float       *CDF;                       //continuous distribution function
     long int    CDF_bins;                   //number of bins for the CDF array
 */
 
@@ -55,7 +55,7 @@ int main(int argc, char *argv[]){
 //    CDF_bins = (long int) 10*noise_std;//ATTENTION *10?
     fprintf(stdout,"infile=%s exp_time=%f noise_std=%f outfile=%s\n", infile, exp_time, noise_std, outfile);
 //    printf("CDF_bins = %ld\n",CDF_bins);
-    
+
     if(noise_std < 0){
         fprintf(stdout,"The mean noise must be positive. The mean noise is set as %f.\n", noise_std);
         exit(1);
@@ -103,7 +103,7 @@ int main(int argc, char *argv[]){
                                                      //WARNING: n!, n CAN't be too large.
         for(i = 0; i < CDF_bins; i++){
             if(i > 0) factorial *= i;
-            printf("i=%d,fact=%ld\n",i,factorial);     
+            printf("i=%d,fact=%ld\n",i,factorial);
             partial_sum += pow(noise_std, i)/factorial;
             CDF[i] = prefactor*partial_sum;
             fprintf(stdout,"CDF[%li]: %f\n", i, CDF[i]);
@@ -117,7 +117,7 @@ int main(int argc, char *argv[]){
     for(row = 0; row < inaxes[0]; row++){
         fprintf(stdout, "Noise-ing row %li/%li.\n", row, inaxes[0]);
         for(col = 0; col < inaxes[1]; col++){
-            long int    index = row*inaxes[1]+col;      //index of this pixel in the image array  
+            long int    index = row*inaxes[1]+col;      //index of this pixel in the image array
             float   u, v;
             float   r2 = 2;                         //some value larger than 1
             while(r2>1){
@@ -125,13 +125,13 @@ int main(int argc, char *argv[]){
                 v = 2*((float) rand())/RAND_MAX-1;
                 r2 = u*u+v*v;
             }
-            
-            
+
+
 /*
             long int    j = 0;                          //counter
             //find the first bin above the random number, or get the last bin
             while(CDF[j] <= r && j < CDF_bins){//previous BUG!!! But doesn't really matter...
-                j++;                
+                j++;
             }
             //printf("random j=%ld\n",j);
 */
@@ -156,4 +156,3 @@ int main(int argc, char *argv[]){
 
     return 0;
 }
-

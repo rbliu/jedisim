@@ -42,7 +42,7 @@ if (not os.path.exists(config['output_folder'])):
 
 #make folder for convolved images
 convolved_path = "%sconvolved/"%config['output_folder']
-if not os.path.exists(convolved_path): 
+if not os.path.exists(convolved_path):
     os.makedirs(convolved_path)
 
 
@@ -91,7 +91,7 @@ run_process("jedipaste (make convolved image)", ['./jedipaste', config['nx'], co
 run_process("jedirescale", ['./jedirescale', config['HST_convolved_image'], config['pix_scale'], config['final_pix_scale'], config['x_trim'], config['y_trim'], config['LSST_convolved_image']])
 
 #simulate exposure time and add Poisson noise
-run_process("jedinoise", ['./jedinoise', config['LSST_convolved_image'], config['exp_time'], config['noise_mean'], config['LSST_convolved_noise_image']])
+run_process("jedinoise", ['./jedinoise', config['LSST_convolved_image'], config['exp_time'], config['noise_std'], config['LSST_convolved_noise_image']])
 
 
 
@@ -197,7 +197,7 @@ run_process("jedipaste (make convolved image)", ['./jedipaste', config['nx'], co
 run_process("jedirescale", ['./jedirescale', config['90_HST_convolved_image'], config['pix_scale'], config['final_pix_scale'], config['x_trim'], config['y_trim'], config['90_LSST_convolved_image']])
 
 #simulate exposure time and add Poisson noise
-run_process("jedinoise", ['./jedinoise', config['90_LSST_convolved_image'], config['exp_time'], config['noise_mean'], config['90_LSST_convolved_noise_image']])
+run_process("jedinoise", ['./jedinoise', config['90_LSST_convolved_image'], config['exp_time'], config['noise_std'], config['90_LSST_convolved_noise_image']])
 
 """
 print "jedisim successful! Exiting."

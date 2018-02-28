@@ -6,13 +6,13 @@ jedi : jedicatalog jeditransform jedidistort jedigrid_a jedigrid_b jedipaste jed
 
 jedicatalog :
 	$(CC) $(CFLAGS) sources/jedicatalog.c -o jedicatalog $(LIBS)
-	
+
 jeditransform :
 	$(CC) $(CFLAGS) sources/jeditransform.c -o jeditransform $(LIBS)
-	
+
 jedidistort :
 	$(CC) $(CFLAGS) sources/jedidistort.c -o jedidistort $(LIBS)
-	
+
 jedigrid_a :
 	$(CC) $(CFLAGS) sources/jedigrid_a.c -o jedigrid_a $(LIBS)
 
@@ -21,13 +21,12 @@ jedigrid_b :
 
 jedipaste :
 	$(CC) $(CFLAGS) sources/jedipaste3.c -o jedipaste $(LIBS)
-	
+
 jediconvolve :
 	$(CC) $(CFLAGS) sources/jediconvolve4.c -o jediconvolve $(LIBS) -lfftw3f
-	
+
 jedirescale :
 	$(CC) $(CFLAGS) sources/jedirescale2.c -o jedirescale $(LIBS)
 
 jedinoise :
-	$(CC) $(CFLAGS) sources/jedinoise.c -o jedinoise $(LIBS)
-
+	$(CC) $(CFLAGS) sources/jedinoise2.c -o jedinoise $(LIBS)
