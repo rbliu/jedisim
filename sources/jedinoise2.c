@@ -4,7 +4,7 @@
 // also add <time.h> for random number seed
 
 // Mon Feb 19 20:10:11 EST 2018: faster method
-// Wed Feb 28 14:03:08 EST 2018: first add noise, than multiply it by exposure time
+// Wed Feb 28 14:03:08 EST 2018: first add noise, then multiply it by exposure time
 
 #include <stdio.h>
 #include <string.h>
