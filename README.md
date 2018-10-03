@@ -11,6 +11,8 @@ The goal of *jedisim* is to generate image simulations for galaxy clusters as a 
 
 **Updates:**
 
+*2018-02-28*: *jedisim5.4* has updated `jedinoise` code to generate sky noise with a Gaussian distribution. The config parameter `noise_mean` is now replaced with `noise_std`. 
+
 *2017-08-18*: *jedisim5.3* has scripts to add fake WCS information to the simulation images (at LSST pixel scale).
 
 *2016-07-17*: *jedisim5.2* has added 201 images from *CANDELS GOODS-S sect23 F814W* corresponding to the *F606W* images. In the distortion code, type=3 generates the distortion table with a single shear, thus we suggest to use type=2 in grid simulations.
