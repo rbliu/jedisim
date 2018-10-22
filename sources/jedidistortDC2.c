@@ -394,8 +394,7 @@ int main(int argc, char *argv[]){
 	if (!alpha_file1){
 		fprintf(stderr, "Unable to open alpha file1.");
 		return 0;
-	}
-	else{
+	} else {
 		fprintf(stdout,"Read in alpha file1 successfully! \n");
 	}
 
@@ -403,8 +402,7 @@ int main(int argc, char *argv[]){
 	if (!alpha_file2){
 		fprintf(stderr, "Unable to open alpha file2.");
 		return 0;
-	}
-	else{
+	} else {
 		fprintf(stdout,"Read in alpha file2 successfully! \n");
 	}
 
@@ -416,8 +414,7 @@ int main(int argc, char *argv[]){
 		fclose(alpha_file1);
 		fclose(alpha_file2);
 		return 0;
-	}
-	else{
+	} else {
 		fprintf(stdout,"alpha arr1 memory allocated successfully! \n");
 	}
 
@@ -426,8 +423,7 @@ int main(int argc, char *argv[]){
 		fclose(alpha_file1);
 		fclose(alpha_file2);
 		return 0;
-	}
-	else{
+	} else {
 		fprintf(stdout,"alpha arr2 memory allocated successfully! \n");
 	}
 
@@ -490,6 +486,7 @@ int main(int argc, char *argv[]){
 							float alphax = 0, alphay = 0;
 							// get_alpha((row*g+srow) << BNSUBPX, (col*g+scol) << BNSUBPX, nlenses, lenses, &alphax, &alphay);
 							get_alpha((row*g+srow) << BNSUBPX, (col*g+scol) << BNSUBPX, scale, alpha_arr1, alpha_arr2, &alphax, &alphay);
+							// printf("x-y: %d %d; alpha: %f %f \n", (row*g+srow) << BNSUBPX, (col*g+scol) << BNSUBPX, alphax, alphay);
 							//find maxima and minima
 							if(srow==0 && scol==0){
 								bounding_box.xmax = alphax;
@@ -790,7 +787,7 @@ int main(int argc, char *argv[]){
 		fits_update_key(outfptr, TLONG, "YEMBED", &ofy , "y pixel in target image to embed lower left pixel.", &status);
 
 		//write output image
-		//fprintf(stdout, "Writing output image %i.\n", gal);
+		fprintf(stdout, "Writing output image %i.\n", gal);
 		fits_write_pix(outfptr, TFLOAT, fpixel, onaxes[0]*onaxes[1], outimage, &status);
 		fits_close_file(outfptr, &status);
 		fits_report_error(stderr, status);
@@ -810,7 +807,7 @@ int main(int argc, char *argv[]){
 
 
 
-//given a  pixel (x,y), and the list of lenses,
+//given a  pixel (x,y) -- in subpixel, and the list of lenses,
 //returns the vector (alpha_x,alpha_y) at that pixel
 // void get_alpha(long int x, long int y, int nlenses, lens* lenses, float* alphax, float* alphay){
 // 	long int         nlens;      //counter
@@ -829,8 +826,10 @@ int main(int argc, char *argv[]){
 // 	}
 // }
 void get_alpha(long int x, long int y, float scale, float* alpha_map1, float* alpha_map2, float* alphax, float* alphay){
-	*alphax += alpha_map1[x*MAP_SIZE+y]/scale;
-	*alphay += alpha_map2[x*MAP_SIZE+y]/scale;
+	int map_coord;
+	map_coord = round(((float) x)/NSUBPX *MAP_SIZE + ((float) y)/NSUBPX);
+	*alphax += alpha_map1[map_coord]/scale;
+	*alphay += alpha_map2[map_coord]/scale;
 }
 
 
