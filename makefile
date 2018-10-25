@@ -2,7 +2,7 @@ CC=gcc
 CFLAGS=-O3 -g
 LIBS=-I/usr/local/include -I/usr/include -L/usr/lib64 -L/usr/local/lib -lm -lcfitsio
 
-jedi : jedicatalog jeditransform jedidistort jedidistortDC2 jedigrid_a jedigrid_b jedipaste jediconvolve jedirescale jedinoise
+jedi : jedicatalog jeditransform jedidistort jedidistortDC2 jedidistort_mini jedigrid_a jedigrid_b jedipaste jediconvolve jedirescale jedinoise
 
 jedicatalog :
 	$(CC) $(CFLAGS) sources/jedicatalog.c -o jedicatalog $(LIBS)
@@ -15,6 +15,9 @@ jedidistort :
 
 jedidistortDC2 :
 	$(CC) $(CFLAGS) sources/jedidistortDC2.c -o jedidistortDC2 $(LIBS)
+
+jedidistort_mini :
+	$(CC) $(CFLAGS) sources/jedidistort_mini.c -o jedidistort_mini $(LIBS)
 
 jedigrid_a :
 	$(CC) $(CFLAGS) sources/jedigrid_a.c -o jedigrid_a $(LIBS)
