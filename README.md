@@ -89,8 +89,10 @@ Modify your settings in *jedisim/physics_settings/*.
 
 Under "jedisim" directory:
 ```
+make
 python jedimaster.py physics_settings/config
 ```
+Please note that you may need to modify the `makefile` according to your dependency library path.
 
 ## 4. Output
 
