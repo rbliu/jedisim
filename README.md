@@ -11,6 +11,8 @@ The goal of *jedisim* is to generate image simulations for galaxy clusters as a 
 
 **Updates:**
 
+*2018-10-31*: *jedisim6.0* has created the new `jedidistortDC2` code to ingest DC2 alpha map as a single lens plane.
+
 *2018-02-28*: *jedisim5.4* has updated `jedinoise` code to generate sky noise with a Gaussian distribution. The config parameter `noise_mean` is now replaced with `noise_std`. 
 
 *2017-08-18*: *jedisim5.3* has scripts to add fake WCS information to the simulation images (at LSST pixel scale).
