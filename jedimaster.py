@@ -76,6 +76,7 @@ run_process("jeditransform", ['./jeditransform', config['catalog_file'], config[
 
 #lens the galaxies one at a time
 run_process("jedidistort", ['./jedidistort', config['nx'], config['ny'], config['dislist_file'], config['lenses_file'], config['pix_scale'], config['lens_z']])
+# run_process("jedidistort", ['./jedidistortDC2', config['nx'], config['ny'], config['dislist_file'], config['lenses_file'], config['pix_scale'], config['lens_z']])
 
 #combine the lensed galaxies onto one large image
 run_process("jedipaste (make unconvolved image)", ['./jedipaste', config['nx'], config['ny'], config['distortedlist_file'], config['HST_image']])

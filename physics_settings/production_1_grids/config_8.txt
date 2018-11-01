@@ -2,7 +2,7 @@
 pix_scale=0.03  		#pixel scale to use (arseconds per pixel)
 final_pix_scale=0.2		#LSST pixscale (arcsecords per pixel)
 exp_time=6000			#exposure time in seconds
-noise_mean=10			#mean for poisson noise
+noise_mean=0.05			#mean for poisson noise
 nx=12288        		#number of pixels in the x direction
 ny=12288        		#number of pixels in the y direction
 x_border=301    		#must be large enough so that no image can overflow_

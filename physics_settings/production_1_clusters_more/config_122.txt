@@ -1,0 +1,82 @@
+#---------------------physics settings-----------------------
+pix_scale=0.06  		#pixel scale to use (arseconds per pixel)
+final_pix_scale=0.2		#LSST pixscale (arcsecords per pixel)
+exp_time=6000			#exposure time in seconds
+noise_std=0.2			#mean for poisson noise
+nx=12288        		#number of pixels in the x direction
+ny=12288        		#number of pixels in the y direction
+x_border=301    		#must be large enough so that no image can overflow_
+y_border=301    		#must be large enough so that no image can overflow
+x_trim=480			#larger than x_border to ensure no edge effects
+y_trim=480			#larger than y_border to ensure no edge effects
+num_galaxies=3000		#number of galaxies to simulate 138,000 default
+min_mag=22      		#minimum magnitude galaxy to simulate (inclusive)
+max_mag=28      		#maximum magnitude galaxy to simulate (inclusive)
+single_redshift=1		#use a single source galaxy redshift? 0 = no, 1=yes
+fixed_redshift=1.5		#the single source galaxy redshift to use
+power=0.33      		#power for the power law galaxy distribution
+lens_z=0.3			#the redshift of the lenses
+lenses_file="physics_settings/production_1_clusters_more/lenses_15.000000_4.000000.txt"	#catalog of lenses to use
+psf_file="physics_settings/psf_scalednew.fits"  #the PSF to use	
+90_psf_file="physics_settings/psf_scalednew.fits"
+#--------------------output settings--------------------------
+output_folder="trial_122/"
+prefix="trial122_"
+HST_image="HST.fits"
+HST_convolved_image="HST_convolved.fits"
+LSST_convolved_image="LSST_convolved.fits"
+LSST_convolved_noise_image="LSST_convolved_noise.fits"
+#-----------database folders----------------------------------
+#must contain files "n.txt" for n= min_mag to max_mag
+radius_db_folder="simdatabase/radius_db/" 
+red_db_folder="simdatabase/red_db/"
+#-----------catalog file locations-----------------------------
+catalog_file="catalog.txt"
+dislist_file="dislist.txt"
+convlist_file="toconvolvelist.txt"
+distortedlist_file="distortedlist.txt"
+convolvedlist_file="convolvedlist.txt"
+#-----------source images-------------------------------------
+num_source_images=36
+#all postage stamp images should be on their own line, prefaced with image
+#postage stamp images should be fits" file including the following header entries:
+#MAG: magnitude of the postage stamp image
+#MAG0: magnitude zeropoint of the postage stamp image
+#PIXSCALE: pixel scale of the postage stamp image
+#RADIUS: R50 radius of the image, in pixels
+image="simdatabase/ivydoneall3/0.fits"
+image="simdatabase/ivydoneall3/10.fits"
+image="simdatabase/ivydoneall3/11.fits"
+image="simdatabase/ivydoneall3/12.fits"
+image="simdatabase/ivydoneall3/13.fits"
+image="simdatabase/ivydoneall3/14.fits"
+image="simdatabase/ivydoneall3/15.fits"
+image="simdatabase/ivydoneall3/16.fits"
+image="simdatabase/ivydoneall3/17.fits"
+image="simdatabase/ivydoneall3/18.fits"
+image="simdatabase/ivydoneall3/19.fits"
+image="simdatabase/ivydoneall3/1.fits"
+image="simdatabase/ivydoneall3/20.fits"
+image="simdatabase/ivydoneall3/22.fits"
+image="simdatabase/ivydoneall3/23.fits"
+image="simdatabase/ivydoneall3/25.fits"
+image="simdatabase/ivydoneall3/27.fits"
+image="simdatabase/ivydoneall3/28.fits"
+image="simdatabase/ivydoneall3/29.fits"
+image="simdatabase/ivydoneall3/2.fits"
+image="simdatabase/ivydoneall3/31.fits"
+image="simdatabase/ivydoneall3/32.fits"
+image="simdatabase/ivydoneall3/33.fits"
+image="simdatabase/ivydoneall3/34.fits"
+image="simdatabase/ivydoneall3/39.fits"
+image="simdatabase/ivydoneall3/3.fits"
+image="simdatabase/ivydoneall3/40.fits"
+image="simdatabase/ivydoneall3/41.fits"
+image="simdatabase/ivydoneall3/43.fits"
+image="simdatabase/ivydoneall3/44.fits"
+image="simdatabase/ivydoneall3/45.fits"
+image="simdatabase/ivydoneall3/4.fits"
+image="simdatabase/ivydoneall3/5.fits"
+image="simdatabase/ivydoneall3/6.fits"
+image="simdatabase/ivydoneall3/8.fits"
+image="simdatabase/ivydoneall3/9.fits"
