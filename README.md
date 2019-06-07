@@ -34,7 +34,8 @@ The goal of *jedisim* is to generate image simulations for galaxy clusters as a 
 
 ## 2. Configuration
 
-Modify your settings in *jedisim/physics_settings/* (The config files can be stored anywhere you like. By default, I put them under this folder. If you have them in different directories or with different file names, make sure you modify the simulation command in the next section accordingly).
+Modify your settings in *jedisim/physics_settings/* 
+(The config files can be stored anywhere you like. By default, I put them under this folder. If you have them in different directories or with different file names, make sure you modify the simulation command in the next section accordingly).
 
 ### Lens parameter
 
