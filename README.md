@@ -6,7 +6,7 @@
 
 The goal of *jedisim* is to generate image simulations for galaxy clusters as a part of [ARCLETS (Analysis of Realistic Cluster Lensing through Extensive Training Simulations)](http://www.het.brown.edu/people/ian/ClustersChallenge/). It is also used to test and calibrate the shape measurements and deblanding in [LSST DM stack](https://pipelines.lsst.io/index.html), as well as mass measurements in [CFHT Clusters pipeline](https://github.com/nicolaschotard/Clusters).
 
-> **Copyright**: jedisim is the property of Ian Dell'Antonio's group. The original source code was developed by *Ian Dell'Antonio* and *Daniel Parker*, maintained and updated by *Robert Binyang Liu* and *Shenming Fu*. For more details about the copyright, please refer to the [LICENSE](https://github.com/rbliu/jedisim/blob/master/LICENSE) file. <br>
+> **Copyright**: jedisim is property of Ian Dell'Antonio's group. The original source code was developed by *Ian Dell'Antonio* and *Daniel Parker*, etc., maintained and updated by *Robert Binyang Liu* and *Shenming Fu*. For more details about the copyright, please refer to the [LICENSE](https://github.com/rbliu/jedisim/blob/master/LICENSE) file. <br>
 > **Claim**: Due to the limitation of single file size on github, we cannot upload all the galaxy postage stamps here. We will upload them somewhere else.
 
 **Updates:**
