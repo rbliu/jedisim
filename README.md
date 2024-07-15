@@ -122,3 +122,9 @@ python jediWCS.py /path/to/LSST/simulation
 * Other parameters can be modified in "jedisim/sources/jedidistort.c" (eg. OMEGA_M, G, H0).
 
 * If any modifications are made in "jedisim/source/" folder, remove the UNIX executable files in "jedisim/" (jedicatalog, jediconvolve, jedidistort, jedigrid_a, jedigrid_b, jedinoise, jedipaste, jedirescale, jeditransform) and regenerate them.
+
+## Citation
+
+Please cite the following paper(s) if you are using `jediSim`:
+
+* Liu et al., Measurement and Calibration of Non-Linear Shear Terms in Galaxy Cluster Fields, Front. Astron. Space Sci., Volume 11 - 2024, doi: 10.3389/fspas.2024.1411810
